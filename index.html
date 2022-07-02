@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet"  href="resources/app.css">
+    
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <div id="app" class="w-100 bg-color-base">
+
+        <header-component title="Rick And Morty App" ></header-component>
+        <nav class=" bg-color-base pb-5">
+            <div class="container">    
+                <div class="row">
+                    <div class="col">
+                        <input 
+                            class="form-control form-control-sm w-50  text-center search-component-input-text" 
+                            v-on:keyup="filter();"  
+                            v-model="textSearch"
+                            placeholder="Rick Sanc..."
+                            >   
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <characters-component :data="characters"></characters-component>
+        <header-component title="Episodes" ></header-component>
+        <episodes-component :data="episodes"></episodes-component>
+    </div>
+    
+    <!-- Libraries -->
+    <script src="resources/js/ServicesRAM.js"></script>
+
+    <!-- Components -->
+    <script src="resources/js/HeaderComponent.js"></script>
+    <script src="resources/js/CharactersComponent.js"></script>
+    <script src="resources/js/EpisodesComponent.js"></script>
+    
+    
+    <script src="resources/js/app.js"></script>
+</body>
+</html>

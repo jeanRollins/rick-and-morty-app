@@ -1,0 +1,32 @@
+.bg-color-base{
+    background: $base-color;
+}
+
+.bg-color-primary{
+    background: $primary-color;
+}
+
+.text-color-primary{
+    color: $primary-color;
+}
+
+.card-no-border{
+    border: 0;
+}
+
+.btn-primary{
+    background: $primary-color;
+    border: 0 ;
+}
+
+.zoom {
+    transition: transform .4s; 
+}
+  
+.zoom:hover {
+    transform: scale(1.2); 
+}
+
+.img-border-radius{
+    border-radius: $border-radius-img;
+}
